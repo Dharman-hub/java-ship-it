@@ -4,6 +4,8 @@ import ru.yandex.practicum.delivery.Trackable;
 
 public class FragileParcel extends Parcel implements Trackable {
 
+    protected static final double fragileParcelCost = 4;
+
     public FragileParcel(String description, int weight, String deliveryAddress, int sendDay) {
         super(description, weight, deliveryAddress, sendDay);
     }
@@ -14,9 +16,9 @@ public class FragileParcel extends Parcel implements Trackable {
     }
 
     @Override
-    public void delivery() {
-        System.out.println("Посылка <<" + description + ">> обёрнута в защитную плёнку");
-        super.delivery();
+    public void packageItem() {
+        System.out.println("Посылка <<" + description + ">> обёрнута в защитную плёнку и упакована");// 1 исправление
+        //переопределил нужный метод
     }
 
     @Override

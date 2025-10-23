@@ -5,10 +5,7 @@ public abstract class Parcel {
    protected final int weight;
    protected final String deliveryAddress;
    protected final int sendDay;
-   protected static final double standardParcelCost = 2;
-   protected static final double fragileParcelCost = 4;
-   protected static final double perishableParcelCost = 3;
-
+    //исправление 3, переместил цены за килограмм
 
     public Parcel(String description, int weight, String deliveryAddress, int sendDay) {
         this.description = description;
